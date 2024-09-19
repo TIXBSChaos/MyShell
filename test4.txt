@@ -1,0 +1,15 @@
+failProgram
+failProgram.c
+Makefile
+mysh
+mysh.c
+passProgram
+passProgram.c
+test1.txt
+test2A.txt
+test2B.txt
+test2out.txt
+test3.txt
+test4.txt
+test5.txt
+test6.txt

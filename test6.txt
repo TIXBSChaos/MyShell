@@ -1,0 +1,4 @@
+./failProgram
+then echo hello
+./passProgram
+then echo hello

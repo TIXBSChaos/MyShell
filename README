@@ -1,0 +1,50 @@
+Karan Chaudhari kmc542
+Shrey Patel sp2195
+------------------------
+TEST CASES
+
+For test cases between Batch Mode and Interactive Mode, we decided that it would be better to test the same things for both of them, since one is reading from a file and the other is reading from the terminal.
+
+Testing basic functionality
+Checks that we can run some basic commands, such as echo.
+Batch
+We made a file called test1.txt with “echo hello” in it and ran mysh with the file as a parameter.
+Interactive
+We ran the shell and inputted “echo hello”.
+
+Testing redirecting output and wildcard state
+Checks that we can redirect the output to a new file and a file that was already created. We redirected the output of cat to the output file. The first time we ran the program, the test2out.txt file wasn’t created. After the file was created, to make sure that we could write to the already created file, we added new test2 text files. We started with only test2A.txt when we created the file and added test2B.txt afterwards.
+test2A.txt contains “Hello” while test2B.txt contains “World”.
+Batch
+We made a file called test2.txt with “cat > test2out.txt  test2*.txt” in it and ran mysh with the file as a parameter.
+We did this 2 times, the first time there was only test2A.txt in the directory and the second time we added test2B.txt.
+Interactive
+We ran the shell and inputted “cat > test2out.txt test2*.txt”.
+We did this 2 times, the first time there was only test2A.txt in the directory and the second time we added test2B.txt.
+In between testing Batch and Interactive modes, we deleted the test2B.txt file.
+
+Testing redirecting input
+To test redirecting input, we simply can write “cat < test3.txt”. If this works properly, you should see the inputs of test3.txt in the terminal (Hello World).
+
+Testing piping
+We ran a simple test to check if piping worked transferring contents of a file to another location. test4.txt is going to be our output file that should hopefully contain what we want to print out. Running the command “ls | > test4.txt” will give us a new file (if not already created) called test4.txt that will contain the contents of the current directory.
+
+For the next 2 test cases, we made programs called “failProgram.c” and “passProgram.c”. 
+failProgram.c just returns 1 while passProgram.c returns 0. This is to simulate a program failing while in execution.
+Testing conditional ELSE
+We ran passProgram.c to make sure that else won’t run.
+Batch
+We made a file called test5.txt and ran mysh with the file as a parameter.
+Interactive
+We ran the shell and inputted “else echo hello”.
+After running the initial test, we then ran passProgram.c to make sure that else will run.
+We ran the same Batch and Interactive tests.
+
+Testing conditional THEN
+We ran failProgram.c to make sure that else won’t run.
+Batch
+We made a file called test6.txt in it and ran mysh with the file as a parameter.
+Interactive
+We ran the shell and inputted “then echo hello”.
+After running the initial test, we then ran passProgram.c to make sure that then will run.
+We ran the same Batch and Interactive tests.
